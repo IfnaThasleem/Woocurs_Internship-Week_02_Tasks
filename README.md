@@ -77,7 +77,9 @@ This repository documents my daily progress during the second week (Day 6 to Day
 
 - Clone the repository:
 ```bash
-git clone https://github.com/YourUsername/student-management.git
+https://github.com/IfnaThasleem/Woocurs_Internship-Week_02_Tasks.git
+```
+```bash
 cd student-management
 ```
 - Install dependencies:
