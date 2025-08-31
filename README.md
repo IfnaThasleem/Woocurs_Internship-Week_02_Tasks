@@ -1,70 +1,118 @@
-# Getting Started with Create React App
+# 📝 Student Registration & Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## 💻 Woocurs Internship – Week 02 Tasks
+This repository documents my daily progress during the second week (Day 6 to Day 10) of my Woocurs Internship. The project I worked on is a Student Registration & Management System using React, Firebase Firestore, and Bootstrap.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📅 Week 02 – Task Log
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Day 6 – Registration Page
+- Created Registration.js for adding new students
+- Implemented automatic registration number generation
+- Added form fields: Name, Email, Phone
+- Applied validation for input fields
+- Styled form with Bootstrap cards and custom CSS
+- Connected form to Firebase Firestore for storing student data
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Day 7 – User List Page
+- Created UserList.js to display all registered students
+- Implemented search functionality by Name, Email, or Registration Number
+- Added sortable columns for easy data organization
+- Added Edit and Delete actions for each user
+- Styled table with hover effects and responsive design
 
-### `npm test`
+# Day 8 – Edit Student
+- Integrated React Router's useParams for editing users
+- Prefilled registration form with existing student data
+- Enabled updating student data in Firebase
+- Added automatic navigation to Users page after editing
+- Ensured form validation remains functional during editing
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Day 9 – Fixes & Optimizations
+- Fixed React Hook useEffect ESLint warnings
+- Ensured automatic registration number generation works for new students
+- Enhanced UX/UI with consistent styling
+- Added hover effects on buttons for better interactivity
 
-### `npm run build`
+# Day 10 – Finalizing CRUD
+- Finalized full CRUD functionality with Firebase Firestore
+- Tested adding, editing, deleting, and viewing students
+- Ensured responsive design for mobile and desktop
+- Prepared project for deployment and GitHub documentation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Tech Stack
+- **Frontend:** React, React Router DOM, Bootstrap 5, React Icons
+- **Backend / Database:** Firebase Firestore
+- **Tools:** VSCode, Chrome DevTools, Firebase Console
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📂 Project Structure
+/student-management
+├── public/
+│   ├── index.html
+├── src/
+│   ├── components/
+│   │   ├── Registration.js
+│   │   ├── UserList.js
+│   │   ├── Home.js
+│   │   ├── About.js
+│   │   ├── Contact.js
+│   │   └── Layout.js
+│   ├── App.js
+│   ├── firebase.js
+│   └── index.js
+├── package.json
+└── README.md
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🚀 How to Run
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Clone the repository:
+```bash
+git clone https://github.com/YourUsername/student-management.git
+cd student-management
+```
+- Install dependencies:
+```bash
+npm install
+```
+- Configure Firebase:
+  - Create a Firebase project and Firestore database
+  - Copy Firebase config to firebase.js
+```bash
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT_ID.appspot.com",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
 
-## Learn More
+const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
+```
+- Start the development server:
+```bash
+npm start
+```
+- Open http://localhost:3000 in your browser.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+----
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 👩‍💻 Author
+***Ifna Thasleem***
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+✨ This README represents my Week 02 (Day 6 – Day 10) tasks during the Woocurs Internship.
