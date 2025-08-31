@@ -51,8 +51,8 @@ This repository documents my daily progress during the second week (Day 6 to Day
 - **Tools:** VSCode, Chrome DevTools, Firebase Console
 
 ---
-
 ## 📂 Project Structure
+```plaintext
 /student-management
 ├── public/
 │   ├── index.html
@@ -69,6 +69,7 @@ This repository documents my daily progress during the second week (Day 6 to Day
 │   └── index.js
 ├── package.json
 └── README.md
+```
 
 ---
 
@@ -86,22 +87,22 @@ npm install
 - Configure Firebase:
   - Create a Firebase project and Firestore database
   - Copy Firebase config to firebase.js
-```bash
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+    ```bash
+    import { initializeApp } from "firebase/app";
+    import { getFirestore } from "firebase/firestore";
 
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
-};
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_PROJECT_ID.appspot.com",
+      messagingSenderId: "YOUR_SENDER_ID",
+      appId: "YOUR_APP_ID"
+    };
 
-const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
-```
+    const app = initializeApp(firebaseConfig);
+    export const db = getFirestore(app);
+    ```
 - Start the development server:
 ```bash
 npm start
